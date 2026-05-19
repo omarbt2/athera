@@ -1,0 +1,67 @@
+name: Athera_updated
+description: Athera 3D - استكشاف التراث الجزائري
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.4
+
+  # Navigation
+  go_router: ^13.2.0
+
+  # UI
+  flutter_animate: ^4.5.0
+  cached_network_image: ^3.3.1
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.2.4
+
+  # HTTP client
+  http: ^1.2.1
+
+  # Storage — Fix #4, #10, #30
+  shared_preferences: ^2.2.3
+
+  # AI — Gemini SDK (used in ai_chat_screen)
+  google_generative_ai: ^0.4.6
+
+  # Localization — Fix #1
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
+  supabase_flutter: ^2.12.4
+  image_picker: ^1.1.2
+  flutter_launcher_icons: ^0.14.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo/
+    - assets/images/
+  # Fonts are loaded via the google_fonts package (no local font files needed).
+  # If you add a fonts/ folder later, declare them here under `fonts:`.
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "web/icons/turathi_icon_1024.png"
+  min_sdk_android: 21
+  adaptive_icon_foreground: "web/icons/turathi_icon_1024.png"
+  adaptive_icon_background: "#1A1A2E"
+  web:
+    generate: true
+    image_path: "web/icons/turathi_icon_1024.png"
+    favicon_path: "web/favicon.png"
+  remove_alpha_ios: true
