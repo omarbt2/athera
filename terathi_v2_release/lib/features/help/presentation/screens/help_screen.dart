@@ -45,11 +45,11 @@ class _HelpScreenState extends State<HelpScreen> {
               surfaceTintColor: Colors.transparent,
               elevation: 0,
               leading: IconButton(
-                icon: Icon(Icons.arrow_back_ios_new_rounded,
+                icon: const Icon(Icons.arrow_back_ios_new_rounded,
                     color: AppColors.textPrimary),
                 onPressed: () => context.pop(),
               ),
-              title: Text(
+              title: const Text(
                 'المساعدة والدعم',
                 style: TextStyle(
                   fontFamily: 'Cairo',
@@ -96,7 +96,7 @@ class _HelpScreenState extends State<HelpScreen> {
                   const SizedBox(height: 20),
 
                   // ── FAQ ───────────────────────────────────────────
-                  Text(
+                  const Text(
                     'الأسئلة الشائعة',
                     style: TextStyle(
                       fontFamily: 'Cairo',
@@ -109,9 +109,9 @@ class _HelpScreenState extends State<HelpScreen> {
                   const SizedBox(height: 12),
 
                   if (filteredFaq.isEmpty)
-                    Center(
+                    const Center(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 30),
+                        padding: EdgeInsets.symmetric(vertical: 30),
                         child: Text(
                           'لا توجد نتائج للبحث',
                           style: TextStyle(
@@ -211,7 +211,7 @@ class _HeroSection extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           colors: [AppColors.logoTeal, AppColors.primary],
           begin: Alignment.topRight,
           end: Alignment.bottomLeft,
@@ -224,9 +224,9 @@ class _HeroSection extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'كيف يمكننا مساعدتك؟',
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontFamily: 'Cairo',
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
@@ -344,7 +344,7 @@ class _QuickActionCard extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               label,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'Cairo',
                 fontSize: 11,
                 fontWeight: FontWeight.w600,
@@ -381,7 +381,7 @@ class _HelpSearchBar extends StatelessWidget {
       child: Row(
         children: [
           const SizedBox(width: 12),
-          Icon(Icons.search_rounded,
+          const Icon(Icons.search_rounded,
               size: 20, color: AppColors.textTertiary),
           const SizedBox(width: 8),
           Expanded(
@@ -389,12 +389,12 @@ class _HelpSearchBar extends StatelessWidget {
               controller: controller,
               onChanged: onChanged,
               textDirection: TextDirection.rtl,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'Cairo',
                 fontSize: 14,
                 color: AppColors.textPrimary,
               ),
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: InputBorder.none,
                 hintText: 'ابحث في الأسئلة...',
                 hintStyle: TextStyle(
@@ -456,7 +456,7 @@ class _FaqItem extends StatelessWidget {
                   Expanded(
                     child: Text(
                       question,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontFamily: 'Cairo',
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
@@ -499,7 +499,7 @@ class _FaqItem extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(16, 12, 16, 14),
                   child: Text(
                     answer,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontFamily: 'Cairo',
                       fontSize: 13,
                       height: 1.7,
@@ -529,10 +529,10 @@ class _ContactSupportCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Icon(Icons.headset_mic_rounded,
+          const Icon(Icons.headset_mic_rounded,
               size: 32, color: AppColors.primary),
           const SizedBox(height: 10),
-          Text(
+          const Text(
             'لم تجد إجابتك؟',
             style: TextStyle(
               fontFamily: 'Cairo',
@@ -542,7 +542,7 @@ class _ContactSupportCard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 4),
-          Text(
+          const Text(
             'فريق الدعم متاح من الأحد إلى الخميس\n9 صباحاً - 5 مساءً',
             textAlign: TextAlign.center,
             style: TextStyle(

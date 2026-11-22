@@ -9,7 +9,6 @@ import '../../../../core/constants/app_radius.dart';
 import '../../../../core/providers/common_providers.dart';
 import '../../../../shared/domain/entities/monument.dart';
 import '../../../../shared/providers/monuments_provider.dart';
-import '../../../home/presentation/widgets/monument_list_card.dart';
 
 class SavedScreen extends ConsumerStatefulWidget {
   const SavedScreen({super.key});
@@ -186,11 +185,11 @@ class _MonumentGridCard extends ConsumerWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: AppRadius.cardRadius,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: AppColors.shadowColor,
               blurRadius: 12,
-              offset: const Offset(0, 4),
+              offset: Offset(0, 4),
             ),
           ],
         ),
@@ -268,11 +267,11 @@ class _HorizontalMonumentCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: AppRadius.settingsRadius,
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: AppColors.shadowColor,
             blurRadius: 10,
-            offset: const Offset(0, 4),
+            offset: Offset(0, 4),
           ),
         ],
       ),

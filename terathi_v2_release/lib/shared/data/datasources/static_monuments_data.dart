@@ -2,15 +2,15 @@ import '../../domain/entities/monument.dart';
 
 class StaticMonumentsData {
   static final List<Monument> monuments = [
-    Monument(
+    const Monument(
       id: '1',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'قصبة الجزائر',
         arDz: 'قصبة دزاير',
         fr: 'Casbah d\'Alger',
         en: 'Casbah of Algiers',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'مدينة عتيقة مبنية على تل مطل على البحر الأبيض المتوسط، تعكس فن العمارة الإسلامية والتاريخ العثماني.',
         arDz: 'مدينة عتيقة مبنية على تل مطل على البحر الأبيض المتوسط، تعكس فن العمارة الإسلامية والتاريخ العثماني.',
         fr: 'Médina antique construite sur une colline surplombant la Méditerranée.',
@@ -27,15 +27,15 @@ class StaticMonumentsData {
       historicalEra: 'العهد العثماني',
       yearBuilt: 'القرن السادس عشر',
     ),
-    Monument(
+    const Monument(
       id: '2',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'مدينة تيمقاد الأثرية',
         arDz: 'تيمقاد',
         fr: 'Timgad',
         en: 'Timgad',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'مدينة رومانية قديمة تعتبر مثالاً رائعاً لتخطيط المدن الرومانية في شمال إفريقيا.',
         arDz: 'مدينة رومانية قديمة تعتبر مثالاً رائعاً لتخطيط المدن الرومانية في شمال إفريقيا.',
         fr: 'Ville romaine antique, excellent exemple de l\'urbanisme romain.',
@@ -52,15 +52,15 @@ class StaticMonumentsData {
       historicalEra: 'العهد الروماني',
       yearBuilt: '100 م',
     ),
-    Monument(
+    const Monument(
       id: '3',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'مقام الشهيد',
         arDz: 'الرياض',
         fr: 'Mémorial du Martyr',
         en: 'Martyrs\' Memorial',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'نصب تذكاري يخلد الثورة الجزائرية وشهداء الحرية.',
         arDz: 'نصب تذكاري يخلد الثورة الجزائرية وشهداء الحرية.',
         fr: 'Mémorial commémorant la guerre d\'Algérie pour l\'indépendance.',
@@ -76,15 +76,15 @@ class StaticMonumentsData {
       historicalEra: 'الجزائر المستقلة',
       yearBuilt: '1982',
     ),
-    Monument(
+    const Monument(
       id: '4',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'جسر سيدي مسيد المعلق',
         arDz: 'قنطرة سيدي مسيد',
         fr: 'Pont Sidi M\'Cid',
         en: 'Sidi M\'Cid Bridge',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'أعلى جسور مدينة قسنطينة، يربط بين صخرتين عظيمتين فوق وادي الرمال.',
         arDz: 'أعلى جسور مدينة قسنطينة، يربط بين صخرتين عظيمتين فوق وادي الرمال.',
         fr: 'Pont suspendu emblématique de Constantine.',
@@ -100,15 +100,15 @@ class StaticMonumentsData {
       historicalEra: 'الاستعمار الفرنسي',
       yearBuilt: '1912',
     ),
-    Monument(
+    const Monument(
       id: '5',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'جميلة (كويكول)',
         arDz: 'جميلة',
         fr: 'Djemila',
         en: 'Djemila',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'موقع أثري روماني يقع في سطيف، يشتهر بساحاته ومدرجاته المحفوظة جيداً.',
         arDz: 'موقع أثري روماني يقع في سطيف، يشتهر بساحاته ومدرجاته المحفوظة جيداً.',
         fr: 'Ancienne colonie romaine située à Sétif.',
@@ -125,15 +125,15 @@ class StaticMonumentsData {
       historicalEra: 'العهد الروماني',
       yearBuilt: '96 م',
     ),
-    Monument(
+    const Monument(
       id: '6',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'قلعة بني حماد',
         arDz: 'القلعة',
         fr: 'Al Qal\'a des Beni Hammad',
         en: 'Al Qal\'a of Beni Hammad',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'أطلال أول عاصمة للحماديين في الجزائر، تعكس روعة العمارة الإسلامية.',
         arDz: 'أطلال أول عاصمة للحماديين في الجزائر، تعكس روعة العمارة الإسلامية.',
         fr: 'Ruines de la première capitale des Hammadites.',
@@ -150,15 +150,15 @@ class StaticMonumentsData {
       historicalEra: 'العهد الحمادي',
       yearBuilt: '1007',
     ),
-    Monument(
+    const Monument(
       id: '7',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'تاسيلي ناجر',
         arDz: 'تاسيلي',
         fr: 'Tassili n\'Ajjer',
         en: 'Tassili n\'Ajjer',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'متحف طبيعي مفتوح في الصحراء يضم آلاف الرسوم والنقوش الصخرية القديمة.',
         arDz: 'متحف طبيعي مفتوح في الصحراء يضم آلاف الرسوم والنقوش الصخرية القديمة.',
         fr: 'Parc national avec art rupestre préhistorique.',
@@ -176,15 +176,15 @@ class StaticMonumentsData {
       historicalEra: 'ما قبل التاريخ',
       yearBuilt: 'منذ 10,000 سنة',
     ),
-    Monument(
+    const Monument(
       id: '8',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'وادي ميزاب',
         arDz: 'ميزاب',
         fr: 'Vallée du M\'Zab',
         en: 'M\'Zab Valley',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'خمس مدن تقليدية مبنية بأسلوب معماري فريد يناسب البيئة الصحراوية.',
         arDz: 'خمس مدن تقليدية مبنية بأسلوب معماري فريد يناسب البيئة الصحراوية.',
         fr: 'Cinq cités traditionnelles à l\'architecture unique.',
@@ -201,15 +201,15 @@ class StaticMonumentsData {
       historicalEra: 'العهد الرستمي',
       yearBuilt: 'القرن العاشر',
     ),
-    Monument(
+    const Monument(
       id: '9',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'مدينة تيبازة الأثرية',
         arDz: 'تيبازة',
         fr: 'Tipaza',
         en: 'Tipasa',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'مجمع من الآثار الفينيقية والرومانية والبيزنطية المطلة على البحر.',
         arDz: 'مجمع من الآثار الفينيقية والرومانية والبيزنطية المطلة على البحر.',
         fr: 'Vestiges romains, phéniciens et byzantins.',
@@ -226,15 +226,15 @@ class StaticMonumentsData {
       historicalEra: 'متعدد العصور',
       yearBuilt: 'القرن السادس ق.م',
     ),
-    Monument(
+    const Monument(
       id: '10',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'الضريح الملكي الموريتاني',
         arDz: 'قبر الرومية',
         fr: 'Tombeau de la Chrétienne',
         en: 'Royal Mausoleum of Mauretania',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'ضريح ملكي عريق يقع في سيدي راشد، يعود للمملكة الموريتانية القديمة.',
         arDz: 'ضريح ملكي عريق يقع في سيدي راشد، يعود للمملكة الموريتانية القديمة.',
         fr: 'Mausolée royal de l\'époque de la Maurétanie Césarienne.',
@@ -250,15 +250,15 @@ class StaticMonumentsData {
       historicalEra: 'العهد الموريتاني',
       yearBuilt: 'القرن الثالث ق.م',
     ),
-    Monument(
+    const Monument(
       id: '11',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'سانتا كروز',
         arDz: 'سانتا كروز',
         fr: 'Fort de Santa Cruz',
         en: 'Fort of Santa Cruz',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'حصن إسباني قديم يطل على مدينة وهران وخليج المرسى الكبير.',
         arDz: 'حصن إسباني قديم يطل على مدينة وهران وخليج المرسى الكبير.',
         fr: 'Fort espagnol dominant Oran.',
@@ -275,15 +275,15 @@ class StaticMonumentsData {
       historicalEra: 'العهد الإسباني',
       yearBuilt: 'القرن السادس عشر',
     ),
-    Monument(
+    const Monument(
       id: '12',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'قلعة المشور',
         arDz: 'المشور',
         fr: 'Palais El Mechouar',
         en: 'El Mechouar Palace',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'قصر ملكي عريق في تلمسان يعكس فن العمارة الزيانية.',
         arDz: 'قصر ملكي عريق في تلمسان يعكس فن العمارة الزيانية.',
         fr: 'Palais royal de la dynastie Zianide.',
@@ -299,15 +299,15 @@ class StaticMonumentsData {
       historicalEra: 'العهد الزياني',
       yearBuilt: '1248',
     ),
-    Monument(
+    const Monument(
       id: '13',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'جبل الأوراس',
         arDz: 'الأوراس',
         fr: 'Monts des Aurès',
         en: 'Aurès Mountains',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'سلسلة جبلية مهيبة في شرق الجزائر، شهدت انطلاق الثورة التحريرية.',
         arDz: 'سلسلة جبلية مهيبة في شرق الجزائر، شهدت انطلاق الثورة التحريرية.',
         fr: 'Chaîne de montagnes dans l\'est de l\'Algérie.',
@@ -323,15 +323,15 @@ class StaticMonumentsData {
       historicalEra: 'العصور الجيولوجية',
       yearBuilt: 'طبيعي',
     ),
-    Monument(
+    const Monument(
       id: '14',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'قصر تاغيت',
         arDz: 'قصر تاغيت',
         fr: 'Ksar de Taghit',
         en: 'Taghit Ksar',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'قصر صحراوي عريق يحيط به الكثبان الرملية الذهبية في منطقة الساورة.',
         arDz: 'قصر صحراوي عريق يحيط به الكثبان الرملية الذهبية في منطقة الساورة.',
         fr: 'Vieux ksar entouré de dunes.',
@@ -347,15 +347,15 @@ class StaticMonumentsData {
       historicalEra: 'العهد القديم',
       yearBuilt: 'القرن الحادي عشر',
     ),
-    Monument(
+    const Monument(
       id: '15',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'مسجد كتشاوة',
         arDz: 'جامع كتشاوة',
         fr: 'Mosquée Ketchaoua',
         en: 'Ketchaoua Mosque',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'من أهم المعالم التاريخية في قصبة الجزائر، يتميز بمزيج معماري فريد.',
         arDz: 'من أهم المعالم التاريخية في قصبة الجزائر، يتميز بمزيج معماري فريد.',
         fr: 'Mosquée historique de la Casbah.',
@@ -371,15 +371,15 @@ class StaticMonumentsData {
       historicalEra: 'العهد العثماني',
       yearBuilt: '1612',
     ),
-    Monument(
+    const Monument(
       id: '16',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'غابة الأرز بشريعة',
         arDz: 'الشريعة',
         fr: 'Forêt de Cèdres de Chréa',
         en: 'Chréa Cedar Forest',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'حديقة وطنية ساحرة تكسوها الثلوج شتاءً وتزينها أشجار الأرز المعمرة.',
         arDz: 'حديقة وطنية ساحرة تكسوها الثلوج شتاءً وتزينها أشجار الأرز المعمرة.',
         fr: 'Parc national avec forêt de cèdres.',
@@ -395,15 +395,15 @@ class StaticMonumentsData {
       historicalEra: 'طبيعي',
       yearBuilt: 'طبيعي',
     ),
-    Monument(
+    const Monument(
       id: '17',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'موقع مادور',
         arDz: 'مادور',
         fr: 'Madaure',
         en: 'Madaurus',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'مدينة أثرية رومانية ومركز علمي قديم ولد فيه الأديب أبوليوس.',
         arDz: 'مدينة أثرية رومانية ومركز علمي قديم ولد فيه الأديب أبوليوس.',
         fr: 'Ancienne cité romaine et centre d\'apprentissage.',
@@ -419,15 +419,15 @@ class StaticMonumentsData {
       historicalEra: 'العهد الروماني',
       yearBuilt: 'القرن الأول م',
     ),
-    Monument(
+    const Monument(
       id: '18',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'قصر الحسينية',
         arDz: 'قصر الباي',
         fr: 'Palais du Bey (Oran)',
         en: 'Bey\'s Palace (Oran)',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'قصر تاريخي في مدينة وهران يمثل حقبة الحكم العثماني في غرب البلاد.',
         arDz: 'قصر تاريخي في مدينة وهران يمثل حقبة الحكم العثماني في غرب البلاد.',
         fr: 'Résidence historique du Bey à Oran.',
@@ -443,15 +443,15 @@ class StaticMonumentsData {
       historicalEra: 'العهد العثماني',
       yearBuilt: '1792',
     ),
-    Monument(
+    const Monument(
       id: '19',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'كنيسة السيدة الأفريقية',
         arDz: 'مدام لافريك',
         fr: 'Notre-Dame d\'Afrique',
         en: 'Our Lady of Africa',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'كنيسة كاثوليكية عريقة تطل على خليج الجزائر، تتميز بطابعها المعماري البيزنطي.',
         arDz: 'كنيسة كاثوليكية عريقة تطل على خليج الجزائر، تتميز بطابعها المعماري البيزنطي.',
         fr: 'Basilique néو-byzantine dominant Alger.',
@@ -467,15 +467,15 @@ class StaticMonumentsData {
       historicalEra: 'الاستعمار الفرنسي',
       yearBuilt: '1872',
     ),
-    Monument(
+    const Monument(
       id: '20',
-      name: const LocalizedText(
+      name: LocalizedText(
         ar: 'قلعة المنصورة',
         arDz: 'المنصورة',
         fr: 'Mansourah',
         en: 'Mansourah',
       ),
-      description: const LocalizedText(
+      description: LocalizedText(
         ar: 'أطلال مدينة وحصن عسكري قرب تلمسان، تشتهر بمئذنتها العالية.',
         arDz: 'أطلال مدينة وحصن عسكري قرب تلمسان، تشتهر بمئذنتها العالية.',
         fr: 'Ruines d\'une ville fortifiée près de Tlemcen.',

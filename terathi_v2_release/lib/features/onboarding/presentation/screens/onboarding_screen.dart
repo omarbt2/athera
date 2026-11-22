@@ -6,7 +6,6 @@ import 'package:go_router/go_router.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../providers/onboarding_provider.dart';
-import '../../../../core/theme/app_colors.dart';
 
 class _OnboardingSlide {
   final String? svgPath;
@@ -20,7 +19,6 @@ class _OnboardingSlide {
   final String tag;
 
   const _OnboardingSlide({
-    this.svgPath,
     this.imagePath,
     this.arabicLetter,
     required this.letterColor,
@@ -29,7 +27,7 @@ class _OnboardingSlide {
     required this.title,
     required this.subtitle,
     required this.tag,
-  });
+  }) : svgPath = null;
 }
 
 const _slides = [

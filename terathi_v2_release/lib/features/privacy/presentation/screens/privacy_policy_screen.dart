@@ -15,20 +15,20 @@ class PrivacyPolicyScreen extends StatelessWidget {
         backgroundColor: AppColors.background,
         body: CustomScrollView(
           slivers: [
-            PolicyAppBar(title: 'سياسة الخصوصية'),
+            const PolicyAppBar(title: 'سياسة الخصوصية'),
             SliverPadding(
               padding: const EdgeInsets.fromLTRB(20, 16, 20, 100),
               sliver: SliverList(
                 delegate: SliverChildListDelegate([
                   // Date badge
-                  DateBadge(date: 'آخر تحديث: أكتوبر 2024')
+                  const DateBadge(date: 'آخر تحديث: أكتوبر 2024')
                       .animate()
                       .fadeIn(duration: 350.ms),
 
                   const SizedBox(height: 20),
 
                   // Intro
-                  IntroCard(
+                  const IntroCard(
                     text:
                         'توضح هذه السياسة كيف نقوم بجمع، استخدام، وحماية بياناتك الشخصية أثناء استخدامك لمنصة Athera 3D. نحن نقدّر خصوصيتك ونلتزم بحماية معلوماتك.',
                   ).animate(delay: 50.ms).fadeIn(duration: 350.ms).slideY(begin: 0.06, end: 0),
@@ -56,7 +56,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   // Contact card
-                  ContactCTA()
+                  const ContactCTA()
                       .animate(delay: 400.ms)
                       .fadeIn(duration: 350.ms),
 
@@ -137,7 +137,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
 
 class PolicyAppBar extends StatelessWidget {
   final String title;
-  const PolicyAppBar({required this.title});
+  const PolicyAppBar({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -147,13 +147,13 @@ class PolicyAppBar extends StatelessWidget {
       surfaceTintColor: Colors.transparent,
       elevation: 0,
       leading: IconButton(
-        icon: Icon(Icons.arrow_back_ios_new_rounded,
+        icon: const Icon(Icons.arrow_back_ios_new_rounded,
             color: AppColors.textPrimary),
         onPressed: () => context.pop(),
       ),
       title: Text(
         title,
-        style: TextStyle(
+        style: const TextStyle(
           fontFamily: 'Cairo',
           fontSize: 17,
           fontWeight: FontWeight.w700,
@@ -173,7 +173,7 @@ class PolicyAppBar extends StatelessWidget {
 
 class DateBadge extends StatelessWidget {
   final String date;
-  const DateBadge({required this.date});
+  const DateBadge({super.key, required this.date});
 
   @override
   Widget build(BuildContext context) {
@@ -186,7 +186,7 @@ class DateBadge extends StatelessWidget {
         ),
         child: Text(
           date,
-          style: TextStyle(
+          style: const TextStyle(
             fontFamily: 'Cairo',
             fontSize: 12,
             color: AppColors.textSecondary,
@@ -200,7 +200,7 @@ class DateBadge extends StatelessWidget {
 
 class IntroCard extends StatelessWidget {
   final String text;
-  const IntroCard({required this.text});
+  const IntroCard({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -215,12 +215,12 @@ class IntroCard extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(Icons.shield_rounded, size: 20, color: AppColors.primary),
+          const Icon(Icons.shield_rounded, size: 20, color: AppColors.primary),
           const SizedBox(width: 10),
           Expanded(
             child: Text(
               text,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: 'Cairo',
                 fontSize: 13,
                 height: 1.7,
@@ -241,7 +241,7 @@ class PolicySection extends StatelessWidget {
   final String content;
   final List<String>? bullets;
 
-  const PolicySection({
+  const PolicySection({super.key, 
     required this.icon,
     required this.iconColor,
     required this.title,
@@ -278,7 +278,7 @@ class PolicySection extends StatelessWidget {
                 const SizedBox(width: 10),
                 Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: 'Cairo',
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
@@ -300,7 +300,7 @@ class PolicySection extends StatelessWidget {
               children: [
                 Text(
                   content,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: 'Cairo',
                     fontSize: 13,
                     height: 1.7,
@@ -327,7 +327,7 @@ class PolicySection extends StatelessWidget {
                             Expanded(
                               child: Text(
                                 b,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontFamily: 'Cairo',
                                   fontSize: 13,
                                   height: 1.6,
@@ -349,6 +349,8 @@ class PolicySection extends StatelessWidget {
 }
 
 class ContactCTA extends StatelessWidget {
+  const ContactCTA({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -359,7 +361,7 @@ class ContactCTA extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Expanded(
+          const Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -372,7 +374,7 @@ class ContactCTA extends StatelessWidget {
                     color: AppColors.textPrimary,
                   ),
                 ),
-                const SizedBox(height: 3),
+                SizedBox(height: 3),
                 Text(
                   'تواصل مع فريق الدعم',
                   style: TextStyle(
@@ -395,9 +397,9 @@ class ContactCTA extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12)),
             ),
-            child: Text(
+            child: const Text(
               'راسلنا',
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: 'Cairo',
                 fontSize: 13,
                 fontWeight: FontWeight.w700,

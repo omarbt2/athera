@@ -1,10 +1,8 @@
-import 'dart:convert';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../domain/entities/monument.dart';
 import '../domain/entities/filter_params.dart';
 import '../data/repositories/monuments_repository.dart';
-import '../../core/providers/common_providers.dart';
 
 // Repository Provider
 final monumentsRepositoryProvider = Provider<IMonumentsRepository>((ref) {

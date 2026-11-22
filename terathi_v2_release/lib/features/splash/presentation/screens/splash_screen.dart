@@ -167,16 +167,16 @@ class _SplashScreenState extends State<SplashScreen>
       height: 112,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: Colors.white.withOpacity(0.8),
+        color: Colors.white.withValues(alpha: 0.8),
         boxShadow: [
           BoxShadow(
-            color: primaryTeal.withOpacity(0.1),
+            color: primaryTeal.withValues(alpha: 0.1),
             blurRadius: 30,
             offset: const Offset(0, 8),
           ),
         ],
         border: Border.all(
-          color: sandLight.withOpacity(0.6),
+          color: sandLight.withValues(alpha: 0.6),
           width: 1,
         ),
       ),
@@ -277,15 +277,15 @@ class _SpinningArcPainter extends CustomPainter {
 
     for (final seg in segments) {
       final paint = Paint()
-        ..color = (seg.$3 as Color).withOpacity(seg.$4 as double)
+        ..color = (seg.$3).withValues(alpha: seg.$4)
         ..style = PaintingStyle.stroke
         ..strokeWidth = 3.5
         ..strokeCap = StrokeCap.round;
 
       canvas.drawArc(
         Rect.fromCircle(center: center, radius: radius),
-        (seg.$1 as double) * 2 * math.pi,
-        (seg.$2 as double) * 2 * math.pi,
+        (seg.$1) * 2 * math.pi,
+        (seg.$2) * 2 * math.pi,
         false,
         paint,
       );
@@ -313,7 +313,7 @@ class _DashedRingPainter extends CustomPainter {
 
     for (int i = 0; i < dashCount; i++) {
       final startAngle = i * dashAngle;
-      final sweepAngle = dashAngle * (1 - gapRatio);
+      const sweepAngle = dashAngle * (1 - gapRatio);
       canvas.drawArc(
         Rect.fromCircle(center: center, radius: radius),
         startAngle,

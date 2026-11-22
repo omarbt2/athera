@@ -1,15 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../core/constants/app_spacing.dart';
 import '../../../auth/presentation/providers/auth_state_provider.dart';
 import '../../../../shared/providers/monuments_provider.dart';
-import '../../../../shared/domain/entities/monument.dart';
 import '../widgets/hero_monument_card.dart';
 import '../widgets/category_chips.dart';
 import '../widgets/monument_list_card.dart';
@@ -85,7 +81,7 @@ class HomeScreen extends ConsumerWidget {
                     fit: BoxFit.contain,
                   ),
                 ),
-                Text(
+                const Text(
                   'Athera 3D',
                   style: TextStyle(
                     fontFamily: 'Cairo',
@@ -195,7 +191,7 @@ class HomeScreen extends ConsumerWidget {
                 // ── Hero Card ──────────────────
                 featuredAsync.when(
                   data: (monument) => HeroMonumentCard(monument: monument),
-                  loading: () => _ShimmerPlaceholder(height: 480, radius: 28),
+                  loading: () => const _ShimmerPlaceholder(height: 480, radius: 28),
                   error: (e, st) => const Center(child: Text('خطأ في التحميل')),
                 ).animate().fadeIn(delay: 150.ms, duration: 500.ms).scale(
                   begin: const Offset(0.96, 0.96),
@@ -248,13 +244,13 @@ class HomeScreen extends ConsumerWidget {
           displayedMonumentsAsync.when(
             data: (monuments) {
               if (monuments.isEmpty) {
-                return SliverToBoxAdapter(
+                return const SliverToBoxAdapter(
                   child: Padding(
-                    padding: const EdgeInsets.all(32),
+                    padding: EdgeInsets.all(32),
                     child: Center(
                       child: Text(
                         'لا توجد نتائج',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontFamily: 'Cairo',
                           color: AppColors.textTertiary,
                           fontSize: 16,
@@ -285,8 +281,8 @@ class HomeScreen extends ConsumerWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Column(
-                  children: List.generate(3, (i) => Padding(
-                    padding: const EdgeInsets.only(bottom: 12),
+                  children: List.generate(3, (i) => const Padding(
+                    padding: EdgeInsets.only(bottom: 12),
                     child: _ShimmerPlaceholder(height: 280, radius: 28),
                   )),
                 ),
@@ -350,7 +346,7 @@ class _ShimmerPlaceholderState extends State<_ShimmerPlaceholder>
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [
+              colors: const [
                 AppColors.surfaceContainerHigh,
                 AppColors.surfaceContainerHighest,
                 AppColors.surfaceContainerHigh,

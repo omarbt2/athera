@@ -111,9 +111,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
         email: supabaseUser.email ?? '',
         avatarUrl: profileData?['avatar_url'] as String?,
         wilaya: profileData?['wilaya'] as String?,
-        joinDate: supabaseUser.createdAt != null
-            ? DateTime.tryParse(supabaseUser.createdAt!)
-            : null,
+        joinDate: DateTime.tryParse(supabaseUser.createdAt),
       );
 
       if (mounted) state = AuthAuthenticated(user);
@@ -125,9 +123,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
             supabaseUser.email?.split('@').first ??
             'مستخدم',
         email: supabaseUser.email ?? '',
-        joinDate: supabaseUser.createdAt != null
-            ? DateTime.tryParse(supabaseUser.createdAt!)
-            : null,
+        joinDate: DateTime.tryParse(supabaseUser.createdAt),
       );
       if (mounted) state = AuthAuthenticated(user);
     }
@@ -146,7 +142,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
     } on AuthException catch (e) {
       state = AuthError(_mapAuthError(e.message));
     } catch (e) {
-      state = AuthError('حدث خطأ غير متوقع. حاول مجدداً.');
+      state = const AuthError('حدث خطأ غير متوقع. حاول مجدداً.');
     }
   }
 
@@ -201,7 +197,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
     } on AuthException catch (e) {
       state = AuthError(_mapAuthError(e.message));
     } catch (e) {
-      state = AuthError('حدث خطأ غير متوقع. حاول مجدداً.');
+      state = const AuthError('حدث خطأ غير متوقع. حاول مجدداً.');
     }
   }
 

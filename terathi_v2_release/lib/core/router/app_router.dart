@@ -17,12 +17,10 @@ import '../../features/monument_detail/presentation/screens/monument_detail_scre
 import '../../features/settings/presentation/screens/settings_screen.dart';
 import '../../features/ai_chat/presentation/screens/ai_chat_screen.dart';
 import '../../features/tour_360/presentation/screens/tour_360_screen.dart';
-import '../../features/premium/presentation/screens/premium_screen.dart';
 import '../../shared/widgets/athera_bottom_nav.dart';
 import '../../shared/widgets/feature_placeholder_screen.dart';
 import '../../features/onboarding/presentation/providers/onboarding_provider.dart';
 import '../../features/auth/presentation/providers/auth_provider.dart';
-import '../../features/auth/presentation/providers/auth_state_provider.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'root');

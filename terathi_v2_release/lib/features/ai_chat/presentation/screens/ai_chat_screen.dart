@@ -322,7 +322,7 @@ class _ChatBody extends ConsumerWidget {
             width: 36,
             height: 36,
             decoration: BoxDecoration(
-              gradient: LinearGradient(
+              gradient: const LinearGradient(
                 colors: [AppColors.logoTeal, AppColors.primary],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -336,7 +336,7 @@ class _ChatBody extends ConsumerWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'المرشد الذكي',
                 style: TextStyle(
                   fontFamily: 'Cairo',
@@ -356,7 +356,7 @@ class _ChatBody extends ConsumerWidget {
                     ),
                   ),
                   const SizedBox(width: 4),
-                  Text(
+                  const Text(
                     'متصل',
                     style: TextStyle(
                       fontFamily: 'Cairo',
@@ -372,7 +372,7 @@ class _ChatBody extends ConsumerWidget {
       ),
       actions: [
         IconButton(
-          icon: Icon(Icons.info_outline_rounded,
+          icon: const Icon(Icons.info_outline_rounded,
               color: AppColors.textSecondary),
           onPressed: () {
             HapticFeedback.lightImpact();
@@ -415,7 +415,7 @@ class _MessageBubble extends StatelessWidget {
               width: 30,
               height: 30,
               decoration: BoxDecoration(
-                gradient: LinearGradient(
+                gradient: const LinearGradient(
                   colors: [AppColors.logoTeal, AppColors.primary],
                 ),
                 borderRadius: BorderRadius.circular(8),
@@ -486,7 +486,7 @@ class _MessageBubble extends StatelessWidget {
           // User avatar
           if (isUser) ...[
             const SizedBox(width: 8),
-            CircleAvatar(
+            const CircleAvatar(
               radius: 15,
               backgroundColor: AppColors.surfaceContainerHigh,
               child: Icon(Icons.person_rounded,
@@ -591,7 +591,7 @@ class _SuggestionsRow extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'أسئلة مقترحة',
             style: TextStyle(
               fontFamily: 'Cairo',
@@ -626,7 +626,7 @@ class _SuggestionsRow extends StatelessWidget {
                     child: Center(
                       child: Text(
                         suggestions[i],
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontFamily: 'Cairo',
                           fontSize: 12,
                           color: AppColors.primary,
@@ -695,12 +695,12 @@ class _InputBar extends StatelessWidget {
                       maxLines: 4,
                       minLines: 1,
                       textDirection: TextDirection.rtl,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontFamily: 'Cairo',
                         fontSize: 14,
                         color: AppColors.textPrimary,
                       ),
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: 'اسألني عن هذا المعلم...',
                         hintStyle: TextStyle(
@@ -709,7 +709,7 @@ class _InputBar extends StatelessWidget {
                           color: AppColors.textTertiary,
                         ),
                         contentPadding:
-                            const EdgeInsets.symmetric(vertical: 12),
+                            EdgeInsets.symmetric(vertical: 12),
                         isDense: true,
                       ),
                       onSubmitted: (_) => onSend(),

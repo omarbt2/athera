@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/theme.dart';
-import '../../../../core/constants/app_radius.dart';
 import '../../../../core/providers/common_providers.dart';
 
 class SettingsScreen extends ConsumerWidget {
@@ -53,7 +52,7 @@ class SettingsScreen extends ConsumerWidget {
               secondary: const Icon(Icons.dark_mode_rounded, color: AppColors.primary),
               title: const Text('الوضع الليلي', style: TextStyle(fontWeight: FontWeight.bold)),
               value: isDarkMode,
-              activeColor: AppColors.primary,
+              activeThumbColor: AppColors.primary,
               onChanged: (val) => ref.read(themeProvider.notifier).toggle(val),
             ),
           ]),
@@ -78,7 +77,7 @@ class SettingsScreen extends ConsumerWidget {
               secondary: const Icon(Icons.wifi_rounded, color: AppColors.primary),
               title: const Text('التحميل عبر WiFi فقط', style: TextStyle(fontWeight: FontWeight.bold)),
               value: isWifiOnly,
-              activeColor: AppColors.primary,
+              activeThumbColor: AppColors.primary,
               onChanged: (val) => ref.read(wifiOnlyProvider.notifier).set(val),
             ),
           ]),
@@ -89,7 +88,7 @@ class SettingsScreen extends ConsumerWidget {
               secondary: const Icon(Icons.notifications_active_rounded, color: AppColors.primary),
               title: const Text('تفعيل الإشعارات', style: TextStyle(fontWeight: FontWeight.bold)),
               value: isNotificationsEnabled,
-              activeColor: AppColors.primary,
+              activeThumbColor: AppColors.primary,
               onChanged: (val) => ref.read(notificationsEnabledProvider.notifier).set(val),
             ),
             if (isNotificationsEnabled) ...[
@@ -98,7 +97,7 @@ class SettingsScreen extends ConsumerWidget {
                 secondary: const Icon(Icons.account_balance_rounded, color: AppColors.textTertiary),
                 title: const Text('معالم جديدة', style: TextStyle(fontWeight: FontWeight.w600)),
                 value: isNewMonumentsEnabled,
-                activeColor: AppColors.primary,
+                activeThumbColor: AppColors.primary,
                 onChanged: (val) => ref.read(newMonumentsProvider.notifier).set(val),
               ),
               const Divider(height: 1, indent: 56),
@@ -106,7 +105,7 @@ class SettingsScreen extends ConsumerWidget {
                 secondary: const Icon(Icons.local_offer, color: AppColors.textTertiary),
                 title: const Text('عروض خاصة', style: TextStyle(fontWeight: FontWeight.w600)),
                 value: isSpecialOffersEnabled,
-                activeColor: AppColors.primary,
+                activeThumbColor: AppColors.primary,
                 onChanged: (val) => ref.read(specialOffersProvider.notifier).set(val),
               ),
             ]

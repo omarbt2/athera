@@ -17,18 +17,18 @@ class TermsScreen extends StatelessWidget {
         backgroundColor: AppColors.background,
         body: CustomScrollView(
           slivers: [
-            PolicyAppBar(title: 'الشروط والأحكام'),
+            const PolicyAppBar(title: 'الشروط والأحكام'),
             SliverPadding(
               padding: const EdgeInsets.fromLTRB(20, 16, 20, 100),
               sliver: SliverList(
                 delegate: SliverChildListDelegate([
-                  DateBadge(date: 'آخر تحديث: أكتوبر 2024')
+                  const DateBadge(date: 'آخر تحديث: أكتوبر 2024')
                       .animate()
                       .fadeIn(),
 
                   const SizedBox(height: 20),
 
-                  IntroCard(
+                  const IntroCard(
                     text:
                         'مرحباً بك في منصة Athera 3D. باستخدامك لهذه المنصة، فإنك توافق على الالتزام بالشروط والأحكام التالية. يُرجى قراءتها بعناية.',
                   ).animate(delay: 50.ms).fadeIn(duration: 350.ms),
@@ -182,7 +182,7 @@ class _TermSection extends StatelessWidget {
                 Expanded(
                   child: Text(
                     title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontFamily: 'Cairo',
                       fontSize: 15,
                       fontWeight: FontWeight.w700,
@@ -203,7 +203,7 @@ class _TermSection extends StatelessWidget {
               children: [
                 Text(
                   content,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: 'Cairo',
                     fontSize: 13,
                     height: 1.7,
@@ -230,7 +230,7 @@ class _TermSection extends StatelessWidget {
                             Expanded(
                               child: Text(
                                 b,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontFamily: 'Cairo',
                                   fontSize: 13,
                                   height: 1.6,
@@ -267,11 +267,11 @@ class _AcceptCard extends StatelessWidget {
         border: Border.all(
             color: AppColors.primary.withValues(alpha: 0.15)),
       ),
-      child: Row(
+      child: const Row(
         children: [
           Icon(Icons.check_circle_rounded,
               color: AppColors.primary, size: 22),
-          const SizedBox(width: 12),
+          SizedBox(width: 12),
           Expanded(
             child: Text(
               'باستمرارك في استخدام Athera 3D، فإنك توافق على هذه الشروط والأحكام.',

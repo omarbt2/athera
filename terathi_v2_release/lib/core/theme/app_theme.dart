@@ -114,12 +114,12 @@ class AppTheme {
         bodyColor: darkText,
         displayColor: darkText,
       ),
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: darkBackground,
         elevation: 0,
         centerTitle: true,
-        iconTheme: const IconThemeData(color: darkText),
-        titleTextStyle: const TextStyle(
+        iconTheme: IconThemeData(color: darkText),
+        titleTextStyle: TextStyle(
           fontFamily: 'Cairo',
           color: darkText,
           fontWeight: FontWeight.bold,

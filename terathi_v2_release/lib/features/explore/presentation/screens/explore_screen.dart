@@ -71,7 +71,9 @@ class _ExploreScreenState extends ConsumerState<ExploreScreen> {
               if (query.isNotEmpty) {
                 final q = query.toLowerCase();
                 if (!m.name.ar.toLowerCase().contains(q) &&
-                    !m.wilaya.toLowerCase().contains(q)) return false;
+                    !m.wilaya.toLowerCase().contains(q)) {
+                  return false;
+                }
               }
               if (category != null && m.category != category) return false;
               if (region != null && m.region != region) return false;
@@ -214,7 +216,7 @@ class _SliverExploreHeader extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: Text(
                         'اكتشف',
                         style: TextStyle(
@@ -244,7 +246,7 @@ class _SliverExploreHeader extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   '$resultCount معلم',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: 'Cairo',
                     fontSize: 13,
                     color: AppColors.textTertiary,
@@ -551,13 +553,13 @@ class _ExploreListCard extends StatelessWidget {
                         memCacheHeight: 300,
                         errorWidget: (_, __, ___) => Container(
                           color: AppColors.surfaceContainerHigh,
-                          child: Icon(Icons.image_not_supported_rounded,
+                          child: const Icon(Icons.image_not_supported_rounded,
                               color: AppColors.textTertiary),
                         ),
                       )
                     : Container(
                         color: AppColors.surfaceContainerHigh,
-                        child: Icon(Icons.account_balance_rounded,
+                        child: const Icon(Icons.account_balance_rounded,
                             color: AppColors.textTertiary),
                       ),
               ),
@@ -580,12 +582,12 @@ class _ExploreListCard extends StatelessWidget {
                               AppColors.unescoGold.withValues(alpha: 0.12),
                           borderRadius: BorderRadius.circular(6),
                         ),
-                        child: Row(
+                        child: const Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Icon(Icons.verified_rounded,
                                 size: 11, color: AppColors.unescoGold),
-                            const SizedBox(width: 3),
+                            SizedBox(width: 3),
                             Text(
                               'يونسكو',
                               style: TextStyle(
@@ -604,7 +606,7 @@ class _ExploreListCard extends StatelessWidget {
                     // Name
                     Text(
                       monument.name.ar,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontFamily: 'Cairo',
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
@@ -620,12 +622,12 @@ class _ExploreListCard extends StatelessWidget {
                     // Location
                     Row(
                       children: [
-                        Icon(Icons.location_on_rounded,
+                        const Icon(Icons.location_on_rounded,
                             size: 13, color: AppColors.textTertiary),
                         const SizedBox(width: 3),
                         Text(
                           monument.wilaya,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontFamily: 'Cairo',
                             fontSize: 12,
                             color: AppColors.textTertiary,
@@ -639,13 +641,13 @@ class _ExploreListCard extends StatelessWidget {
                     // Rating + Category
                     Row(
                       children: [
-                        Icon(Icons.star_rounded,
+                        const Icon(Icons.star_rounded,
                             size: 14,
-                            color: const Color(0xFFFFB400)),
+                            color: Color(0xFFFFB400)),
                         const SizedBox(width: 2),
                         Text(
                           monument.rating.toStringAsFixed(1),
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontFamily: 'Cairo',
                             fontSize: 12,
                             fontWeight: FontWeight.w700,
@@ -747,15 +749,15 @@ class _ExploreGridCard extends StatelessWidget {
                             color: Colors.black.withValues(alpha: 0.5),
                             borderRadius: BorderRadius.circular(8),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              const Icon(Icons.verified_rounded,
+                              Icon(Icons.verified_rounded,
                                   size: 10, color: Color(0xFFFFD700)),
-                              const SizedBox(width: 2),
+                              SizedBox(width: 2),
                               Text(
                                 'UNESCO',
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontFamily: 'Cairo',
                                   fontSize: 9,
                                   color: Colors.white,
@@ -779,7 +781,7 @@ class _ExploreGridCard extends StatelessWidget {
                 children: [
                   Text(
                     monument.name.ar,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontFamily: 'Cairo',
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
@@ -791,13 +793,13 @@ class _ExploreGridCard extends StatelessWidget {
                   const SizedBox(height: 3),
                   Row(
                     children: [
-                      Icon(Icons.location_on_rounded,
+                      const Icon(Icons.location_on_rounded,
                           size: 11, color: AppColors.textTertiary),
                       const SizedBox(width: 2),
                       Expanded(
                         child: Text(
                           monument.wilaya,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontFamily: 'Cairo',
                             fontSize: 11,
                             color: AppColors.textTertiary,
@@ -805,12 +807,12 @@ class _ExploreGridCard extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      Icon(Icons.star_rounded,
-                          size: 11, color: const Color(0xFFFFB400)),
+                      const Icon(Icons.star_rounded,
+                          size: 11, color: Color(0xFFFFB400)),
                       const SizedBox(width: 2),
                       Text(
                         monument.rating.toStringAsFixed(1),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontFamily: 'Cairo',
                           fontSize: 11,
                           fontWeight: FontWeight.w700,
@@ -882,7 +884,7 @@ class _EmptyState extends StatelessWidget {
             color: AppColors.textTertiary.withValues(alpha: 0.4),
           ),
           const SizedBox(height: 16),
-          Text(
+          const Text(
             'لا توجد نتائج',
             style: TextStyle(
               fontFamily: 'Cairo',
@@ -892,7 +894,7 @@ class _EmptyState extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 6),
-          Text(
+          const Text(
             'جرّب تعديل الفلتر أو البحث بكلمة أخرى',
             style: TextStyle(
               fontFamily: 'Cairo',

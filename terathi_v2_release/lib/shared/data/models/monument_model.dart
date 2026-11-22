@@ -47,6 +47,7 @@ class MonumentModel extends Monument {
     );
   }
 
+  @override
   Map<String, dynamic> toJson() {
     return {
       'id': id,

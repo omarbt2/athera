@@ -23,11 +23,11 @@ class HeroMonumentCard extends ConsumerWidget {
       decoration: BoxDecoration(
         borderRadius: AppRadius.cardRadius,
         color: AppColors.primaryContainer,
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: AppColors.shadowColor,
             blurRadius: 20,
-            offset: const Offset(0, 4),
+            offset: Offset(0, 4),
           ),
         ],
       ),

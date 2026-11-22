@@ -89,9 +89,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
                   const SizedBox(height: 16),
 
-                  Text(
+                  const Text(
                     'Athera 3D',
-                    style: const TextStyle(fontFamily: 'Cairo',
+                    style: TextStyle(fontFamily: 'Cairo',
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                       color: AppColors.primaryContainer,
@@ -101,11 +101,11 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   const SizedBox(height: 36),
 
                   // ── Title ─────────────────────────────────
-                  Align(
+                  const Align(
                     alignment: Alignment.centerRight,
                     child: Text(
                       'مرحباً بعودتك',
-                      style: const TextStyle(fontFamily: 'Cairo',
+                      style: TextStyle(fontFamily: 'Cairo',
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
                         color: AppColors.textPrimary,
@@ -113,11 +113,11 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     ),
                   ).animate().fade(delay: 300.ms).slideX(begin: 0.2, end: 0),
 
-                  Align(
+                  const Align(
                     alignment: Alignment.centerRight,
                     child: Text(
                       'سجّل دخولك للاستكشاف',
-                      style: const TextStyle(fontFamily: 'Cairo',
+                      style: TextStyle(fontFamily: 'Cairo',
                         fontSize: 14,
                         color: AppColors.textSecondary,
                       ),
@@ -172,9 +172,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     alignment: Alignment.centerLeft,
                     child: TextButton(
                       onPressed: () => context.go('/forgot-password'),
-                      child: Text(
+                      child: const Text(
                         'نسيت كلمة المرور؟',
-                        style: const TextStyle(fontFamily: 'Cairo',
+                        style: TextStyle(fontFamily: 'Cairo',
                           fontSize: 13,
                           color: AppColors.primaryContainer,
                           fontWeight: FontWeight.w600,
@@ -216,9 +216,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                                 strokeWidth: 2.5,
                               ),
                             )
-                          : Text(
+                          : const Text(
                               'تسجيل الدخول',
-                              style: const TextStyle(fontFamily: 'Cairo',
+                              style: TextStyle(fontFamily: 'Cairo',
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -242,18 +242,18 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      const Text(
                         'ليس لديك حساب؟ ',
-                        style: const TextStyle(fontFamily: 'Cairo',
+                        style: TextStyle(fontFamily: 'Cairo',
                           color: AppColors.textSecondary,
                           fontSize: 14,
                         ),
                       ),
                       GestureDetector(
                         onTap: () => context.go('/register'),
-                        child: Text(
+                        child: const Text(
                           'سجّل الآن',
-                          style: const TextStyle(fontFamily: 'Cairo',
+                          style: TextStyle(fontFamily: 'Cairo',
                             color: AppColors.primaryContainer,
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -283,20 +283,20 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 class _OrDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
-        const Expanded(child: Divider(color: Color(0xFFE0E3EC))),
+        Expanded(child: Divider(color: Color(0xFFE0E3EC))),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12),
+          padding: EdgeInsets.symmetric(horizontal: 12),
           child: Text(
             'أو',
-            style: const TextStyle(fontFamily: 'Cairo',
+            style: TextStyle(fontFamily: 'Cairo',
               color: AppColors.textTertiary,
               fontSize: 13,
             ),
           ),
         ),
-        const Expanded(child: Divider(color: Color(0xFFE0E3EC))),
+        Expanded(child: Divider(color: Color(0xFFE0E3EC))),
       ],
     );
   }
@@ -323,7 +323,7 @@ class _GoogleSignInButton extends ConsumerWidget {
             borderRadius: BorderRadius.circular(16),
           ),
         ),
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Google G logo using text
@@ -332,14 +332,14 @@ class _GoogleSignInButton extends ConsumerWidget {
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: const Color(0xFF4285F4),
+                color: Color(0xFF4285F4),
                 fontFamily: 'serif',
               ),
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: 12),
             Text(
               'المتابعة مع Google',
-              style: const TextStyle(fontFamily: 'Cairo',
+              style: TextStyle(fontFamily: 'Cairo',
                 fontSize: 15,
                 fontWeight: FontWeight.w600,
                 color: AppColors.textPrimary,
