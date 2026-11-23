@@ -43,4 +43,3 @@ Keep API keys, Supabase credentials, and other private configuration out of Git.
 ## Repository layout
 
 - `terathi_v2_release/` — main Flutter application
-- `MyApplication/` — legacy Android Studio starter project; not the active Flutter application
