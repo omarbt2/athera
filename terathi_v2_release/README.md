@@ -1,17 +1,33 @@
-# Athera_updated
+# Athera
 
-A new Flutter project.
+Athera is a mobile application for discovering and exploring Algerian cultural heritage and historic places.
 
-## Getting Started
+## Technology
 
-This project is a starting point for a Flutter application.
+- Flutter and Dart
+- Riverpod state management
+- GoRouter navigation
+- Supabase integration
+- Google Generative AI integration
 
-A few resources to get you started if this is your first Flutter project:
+## Requirements
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Install Flutter and the Android toolchain for the platform you want to run.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Install and run
+
+```bash
+flutter pub get
+flutter run
+```
+
+## Checks
+
+```bash
+flutter analyze
+flutter test
+```
+
+## Security
+
+Do not commit API keys or private Supabase credentials. Keep privileged keys in a secure server-side environment; credentials embedded in a mobile client should be treated as public.
