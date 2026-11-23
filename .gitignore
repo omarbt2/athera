@@ -1,7 +1,34 @@
-node_modules/
-.agents/
-build/
+# Flutter / Dart
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+
+# Android / Gradle
+.gradle/
+local.properties
+.cxx/
+.externalNativeBuild/
+
+# iOS / macOS
+Pods/
+.build/
+DerivedData/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+
+# Local secrets
 .env
+.env.*
+!.env.example
+
+# Editors and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+.agents/
